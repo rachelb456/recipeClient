@@ -1,0 +1,24 @@
+<div class="main">
+    <ul class="cards">
+        <li class="cards_item">
+            <div class="card">
+                <div class="card_image"><img src="http://localhost:1234/images/{{DatielsSer.obj.pic}}"></div>
+                <div class="card_content">
+                    <h2 class="card_title">amount of portions: {{DatielsSer.obj.numOfManot}}</h2>
+                    <h2 class="card_title">level: {{DatielsSer.obj.level}}</h2>
+                    <div class="card_text">
+                        <p>{{DatielsSer.obj.des}} </p>
+                        <p>how many time it's take? {{DatielsSer.obj.time|number}} hour</p>
+                        <ul>ingredients:
+                            <div *ngFor="let i of DatielsSer.obj.ingredients">
+                                <li>{{i.amount}} of {{i.name}}</li>
+
+                            </div>
+                        </ul>
+                        <p>{{DatielsSer.obj.instructions}}</p>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
